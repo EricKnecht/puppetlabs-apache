@@ -34,7 +34,7 @@ class apache (
     ensure  => directory,
     path    => $apache::params::vdir,
     recurse => true,
-    purge   => true,
+    purge   => false,
     notify  => Service['httpd'],
     require => Package['httpd'],
   }
