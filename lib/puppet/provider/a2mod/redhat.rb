@@ -2,6 +2,7 @@ Puppet::Type.type(:a2mod).provide(:redhat) do
   desc "Manage Apache 2 modules on RedHat family OSs"
 
   confine :osfamily => :redhat
+  confine :operatingsystem => :amazon
   defaultfor :osfamily => :redhat
   defaultfor :operatingsystem => :amazon
 
