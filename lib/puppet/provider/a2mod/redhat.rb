@@ -3,6 +3,7 @@ Puppet::Type.type(:a2mod).provide(:redhat) do
 
   confine :osfamily => :redhat
   defaultfor :osfamily => :redhat
+  defaultfor :operatingsystem => :amazon
 
   attr_accessor :modfile
   class << self
